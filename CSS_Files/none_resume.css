@@ -1,0 +1,19 @@
+h1 {
+  margin-left: 15%;
+}
+
+p {
+  margin-left: 25%;
+  margin-right: 10%;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+figure {
+  margin-left: 25%;
+  float: left;
+}
+
+figcaption {
+  font-size: 20px;
+}

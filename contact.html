@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="CSS_Files/styles.css">
+    <link rel="stylesheet" href="CSS_Files/contact.css">
+</head>
+
+<body>
+    <iframe id='menu_frame' src="Frames/menu.html" frameborder="1" height="100%"></iframe>
+    <h1>Contact Me</h1>
+
+    <div id="floating_box">
+        <h2 style="padding-top: 20px;"> <b>For readers other than my instructor, please read:</b></h2>
+        <hr>
+        <p>
+            This contact page will not actually sent an email to
+            to me, it was created for the purpose of learning
+            web development. I will remove this box if I ever
+            add the feature that actually sends an email.
+        </p>
+    </div>
+
+    <p style="margin-left: 38%;">Fill out the following form to send me an email.</p>
+
+    <form name="thisForm" style="margin-left: 40%; margin-bottom: 35px;">
+        <table>
+            <tr>
+                <td>Full Name:</td>
+            </tr>
+            <tr>
+                <td><input type="text" size="40" name="fullname"></td>
+            </tr>
+            <tr>
+                <td>Your Email Address:</td>
+            </tr>
+            <tr>
+                <td><input type="text" size="40" name="email"></td>
+            </tr>
+
+            <tr>
+                <td>Subject:</td>
+            </tr>
+            <tr>
+                <td><input type="text" size="40" name="subject"></td>
+            </tr>
+            <tr>
+                <td>Priority:</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="priority" id="priority">
+                        <option value="none">...Choose a priority</option>
+                        <option value="urgent">URGENT!</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                        <option value="spam">Read After Reading Spam</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+            </tr>
+            <tr>
+                <td><textarea name="message" id="" cols="40" rows="15"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="Clear Form">
+                    <input type="button" value="Send Message" onclick="sendMessage()">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+
+        <table>
+            <tr>
+                <td>If your message passes inspection, it will be displayed below:</td>
+            </tr>
+
+            <tr>
+                <td><textarea name="sentMessage" cols="60" rows="15" readonly></textarea></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function sendMessage() {
+            document.thisForm.sentMessage.value = "Sending message...";
+
+            setTimeout(messageSent, 2000);
+        }
+
+        function messageSent() {
+            var e = "Message Sent!" + "\n\n";
+            e = e + "Sender's Name: " + document.thisForm.fullname.value;
+            e = e + "\n" + "Sender's Email: " + document.thisForm.email.value;
+            e = e + "\n\n" + "Subject: " + document.thisForm.subject.value + "\n";
+
+            var priorityLevel = "";
+            switch (document.thisForm.priority.value) {
+                case "none":
+                    priorityLevel = "No Priority selected...";
+                    break;
+
+                case "urgent":
+                    priorityLevel = "Urgent! Read Now...";
+                    break;
+
+                case "high":
+                    priorityLevel = "Pretty darn important...";
+                    break;
+
+                case "medium":
+                    priorityLevel = "Kind of important...";
+                    break;
+
+                case "low":
+                    priorityLevel = "Not important at all...";
+                    break;
+
+                case "spam":
+                    priorityLevel = "This is just spam...";
+                    break;
+            }
+
+            e = e + "Priority: " + priorityLevel + "\n\n" + document.thisForm.message.value;
+
+            document.thisForm.sentMessage.value = e;
+        }
+    </script>
+</body>
+
+</html>

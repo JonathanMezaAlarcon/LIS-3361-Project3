@@ -1,0 +1,67 @@
+h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.asides {
+  padding-bottom: 0;
+}
+
+p {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#left_column {
+  background-color: rgb(87, 167, 221);
+  position: absolute;
+  left: 0;
+  width: 200px;
+  top: 110px;
+  color: white;
+}
+
+#right_column {
+  background-color: rgb(87, 167, 221);
+  position: absolute;
+  right: 0;
+  top: 110px;
+  width: 300px;
+  color: white;
+}
+
+#learning_frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84%;
+}
+
+#left_column,
+#center_column,
+#right_column {
+  min-height: 100%;
+  border-style: solid;
+  border-color: black;
+  border-bottom-style: none;
+}
+
+#center_column {
+  margin-top: 7%;
+  margin-left: 195px;
+  margin-right: 295px;
+  border-top-style: none;
+  padding-top: 1px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: lightblue;
+  z-index: 1;
+  border-style: solid;
+  border-color: black;
+}

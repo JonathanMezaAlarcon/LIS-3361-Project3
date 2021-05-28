@@ -1,0 +1,42 @@
+#menu_frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+body {
+  background-color: aliceblue;
+  font-family: "Akaya Telivigala", cursive;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 150;
+}
+
+h3 {
+  font-weight: 150;
+  font-size: 27px;
+}
+
+p,
+h4,
+h2,
+li {
+  font-size: 17px;
+}
+
+a:hover {
+  opacity: 0.3;
+}
+
+a {
+  text-decoration: none;
+}
